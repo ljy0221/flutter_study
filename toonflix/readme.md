@@ -8,3 +8,5 @@ await  >>비동기 함수에서만 사용할 수 있는 함수로 api가 값을 
 statuscode == 200 >> 통신이 성공했음
 
 named constructure 복습
+
+다른 사람이 만든 package를 받아오는 방법 >> pub.dev에서 찾아서 pubspec.yaml 파일의 dependencies에 저장
