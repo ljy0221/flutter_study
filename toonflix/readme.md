@@ -52,11 +52,15 @@ GestureDetector
 	이름 그대로 모든 제스처 활동을 감지해 그에 해당하는 명령을 할당할 수 있는 위젯으로
 	on click = ontap = ontapdown + ontapup;
 	
-Navigator
-	화면이동 지시
+Navigator >> Route (전자가 더 큰 개념 // Navigator -> Route관리자)
+	플러터의 화면이동은 기존 화면 위에 새로운 화면을 계속해서 덧씌우는 식으로 이동하는것 같음 그래서 새로운 페이지로 이동할 때는 새로운 빌더를 통해 화면을 다시 생성하고 움직임, 대신 직전 단계의 화면으로의 이동은 앞에 있는 창만 닫으면 바로 이루어짐
+	장점?: 플로팅 및 다양한 화면전환에서 부드럽게 전환 가능하다
+ 	단점?: 화면위에 스택을 계속 쌓다보니 잦은 화면전환이 필요한 앱에서는 과부화 걸릴 수 있겠다?
+ 
+	1. push(context, MaterialPageRoute): 다른 페이지로 이동
+ 	2. pop(context): 이전 페이지로 이동
+	3. popUntil: 최초 라우트로 이동 후 이전에 생성했던 모든 위젯 종료
+
+
+내부 저장소 접근 - https://pub.dev/packages/shared_preferences 패키지 사용
 	
-MaterialPageRoute
-	Navigator에서 애니메이션 생성
-	
-	
-URL FETCHING
